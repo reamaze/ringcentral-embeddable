@@ -4834,7 +4834,7 @@ if (typeof NodeList !== 'undefined' && NodeList.prototype && !NodeList.prototype
 }
 
 var version = "0.2.5";
-var appUrl = "".concat("https://ringcentral.github.io/ringcentral-embeddable", "/app.html");
+var appUrl = "".concat("https://reamaze.github.io/ringcentral-embeddable", "/app.html");
 var currentScipt = document.currentScript;
 
 if (!currentScipt) {
