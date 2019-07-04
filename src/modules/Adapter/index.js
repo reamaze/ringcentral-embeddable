@@ -215,7 +215,7 @@ export default class Adapter extends AdapterModuleCore {
             this._auth.logout();
           }
           break;
-        case 'rc-calling-settings-update': 
+        case 'rc-calling-settings-update':
           if (this._callingSettings.ready) {
             this._updateCallingSettings(data);
           }
