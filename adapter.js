@@ -4864,7 +4864,8 @@ var _parseUri = (0, _parseUri2.default)(currentScipt && currentScipt.src || ''),
     errorReportToken = _parseUri.errorReportToken,
     errorReportSampleRate = _parseUri.errorReportSampleRate,
     errorReportProjectId = _parseUri.errorReportProjectId,
-    authorizationCode = _parseUri.authorizationCode;
+    authorizationCode = _parseUri.authorizationCode,
+    authorizationUrl = _parseUri.authorizationUrl;
 
 function obj2uri(obj) {
   if (!obj) {
@@ -4902,6 +4903,7 @@ var appUri = "".concat(appUrl, "?").concat(obj2uri({
   errorReportSampleRate: errorReportSampleRate,
   errorReportProjectId: errorReportProjectId,
   authorizationCode: authorizationCode,
+  authorizationUrl: authorizationUrl,
   fromAdapter: 1,
   _t: Date.now()
 }));
