@@ -44,6 +44,7 @@ const {
   enableFromNumberSetting,
   disconnectInactiveWebphone,
   disableInactiveTabCallEvent,
+  authorizationUrl
 } = pathParams;
 
 const redirectUri = pathParams.redirectUri || process.env.REDIRECT_URI;
@@ -93,6 +94,7 @@ const phone = createPhone({
   disableInactiveTabCallEvent: !!disableInactiveTabCallEvent,
   enableFromNumberSetting: !!enableFromNumberSetting,
   disconnectInactiveWebphone: !!disconnectInactiveWebphone,
+  authorizationUrl,
 });
 
 const store = createStore(phone.reducer);

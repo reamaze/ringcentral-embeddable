@@ -591,6 +591,7 @@ export function createPhone({
   enableFromNumberSetting,
   disconnectInactiveWebphone,
   disableInactiveTabCallEvent,
+  authorizationUrl
 }) {
   let appNameForSDK = brandConfig.appName.replace(/\s+/g, '');
   if (userAgent) {
@@ -622,6 +623,7 @@ export function createPhone({
           proxyUri,
           authMode,
           authorizationCode,
+          authorizationUrl,
         },
         spread: true
       },

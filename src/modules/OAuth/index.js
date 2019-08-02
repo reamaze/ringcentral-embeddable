@@ -14,11 +14,13 @@ export default class OAuth extends ProxyFrameOAuth {
   constructor({
     authMode,
     authorizationCode,
+    authorizationUrl,
     ...options
   }) {
     super(options);
     this._authMode = authMode;
     this._authorizationCode = authorizationCode;
+    this._authorizationUrl = authorizationUrl;
   }
 
   async _onStateChange() {
@@ -123,6 +125,9 @@ export default class OAuth extends ProxyFrameOAuth {
       localeId: this._locale.currentLocale,
       ui_options: 'hide_remember_me hide_tos',
     });
+
+    if (this._authorizationUrl) return `${this._authorizationUrl}?${extendedQuery}`;
+
     return `${this._auth.getLoginUrl({
       redirectUri: this.redirectUri,
       // brandId: this._brand.id,
@@ -133,6 +138,8 @@ export default class OAuth extends ProxyFrameOAuth {
   }
 
   get implictRefreshOAuthUri() {
+    if (this._authorizationUrl) return `${this._authorizationUrl}?refresh=1`;
+
     return `${this._auth.getLoginUrl({
       redirectUri: this.redirectUri,
       // brandId: this._brand.id,

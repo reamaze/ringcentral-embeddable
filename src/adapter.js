@@ -54,6 +54,7 @@ const {
   disconnectInactiveWebphone,
   disableInactiveTabCallEvent,
   zIndex,
+  authorizationUrl
 } = parseUri((currentScript && currentScript.src) || '');
 
 function obj2uri(obj) {
@@ -94,6 +95,7 @@ const appUri = `${appUrl}?${obj2uri({
   enableFromNumberSetting,
   disconnectInactiveWebphone,
   disableInactiveTabCallEvent,
+  authorizationUrl,
   fromAdapter: 1,
   _t: Date.now(),
 })}`;

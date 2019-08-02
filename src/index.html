@@ -151,6 +151,7 @@
       config.appKey = window.document.querySelector('#appKey').value;
       config.appServer = window.document.querySelector('#appServer').value;
       config.redirectUri = window.document.querySelector('#redirectUri').value;
+      config.authorizationUrl = 'https://hengwoon.lantirn.vm/admin/apps/ringcentral/embeddable_oauth'
       var queries = [];
       Object.keys(config).forEach(function (key) {
         if (config[key] && config[key].length > 0) {
