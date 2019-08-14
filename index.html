@@ -120,7 +120,7 @@
   <script>
     (function () {
       var rcs = document.createElement('script');
-      rcs.src = './adapter.js?notification=1&disableGlip=false&disableConferenceCall=false&disableActiveCallControl=false&analyticsKey=RDKF1YE9HRx52Zpmz3EMACtej1Cl8fga';
+      rcs.src = './adapter.js?notification=1&disableGlip=false&disableConferenceCall=false&disableActiveCallControl=false&analyticsKey=RDKF1YE9HRx52Zpmz3EMACtej1Cl8fga&disconnectInactiveWebphone=1';
       var rcs0 = document.getElementsByTagName('script')[0];
       rcs0.parentNode.insertBefore(rcs, rcs0);
     })();
@@ -142,6 +142,7 @@
       config.appKey = window.document.querySelector('#appKey').value;
       config.appServer = window.document.querySelector('#appServer').value;
       config.redirectUri = window.document.querySelector('#redirectUri').value;
+      config.authorizationUrl = 'https://hengwoon.lantirn.vm/admin/apps/ringcentral/embeddable_oauth'
       var queries = [];
       Object.keys(config).forEach(function (key) {
         if (config[key] && config[key].length > 0) {
