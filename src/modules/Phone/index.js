@@ -609,6 +609,7 @@ export function createPhone({
           appVersion,
           cachePrefix: `sdk-${prefix}`,
           clearCacheOnRefreshError: false,
+          refreshDelayMs: 800,
         },
       },
       {

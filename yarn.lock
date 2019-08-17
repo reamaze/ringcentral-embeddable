@@ -8889,10 +8889,9 @@ ringcentral-widgets@^0.10.18:
     url-parse "^1.2.0"
     uuid "^3.3.3"
 
-ringcentral@^3.2.2:
+"ringcentral@git://github.com/reamaze/ringcentral-js#reamaze-v3":
   version "3.2.2"
-  resolved "https://registry.yarnpkg.com/ringcentral/-/ringcentral-3.2.2.tgz#ebafffc9868b9d39f94bf48732853ae32e97523f"
-  integrity sha512-dcwJwVrtzNHiOQXQDXISp2izkxhplN7Wg0OZI3dGIGTksrwmJ5K/MhEj6J1wkO3eGUmrkO/K8aruBbWRdw/HQQ==
+  resolved "git://github.com/reamaze/ringcentral-js#a8bb890bc630efb8a994931e0bfd7e46f558c0f5"
   dependencies:
     es6-promise "^4.0.5"
     fetch-ponyfill "^3.0.2"
